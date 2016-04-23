@@ -3,19 +3,18 @@ Butter Knife
 
 ![Logo](website/static/logo.png)
 
-Field and method binding for Android views which uses annotation processing to generate boilerplate
-code for you.
+Vinculação de campos e médotos para views do Android usando anotações para gerar códigos "Clichês" para você
 
- * Eliminate `findViewById` calls by using `@BindView` on fields.
- * Group multiple views in a list or array. Operate on all of them at once with actions,
-   setters, or properties.
- * Eliminate anonymous inner-classes for listeners by annotating methods with `@OnClick` and others.
- * Eliminate resource lookups by using resource annotations on fields.
+ * Elimine chamadas `findViewById` usando `@Bind` nos campos.
+ * Agrupe diversas views em uma lista ou array. Utilize em todos eles de uma vez com ações,
+   setters, ou properties.
+ * Elimine inner-classes anônimas para listeners usando anotações `@OnClick` em métodos.
+ * Use anotações nos campos para eliminar pesquisa de recursos.
 
 ```java
 class ExampleActivity extends Activity {
-  @BindView(R.id.user) EditText username;
-  @BindView(R.id.pass) EditText password;
+  @Bind(R.id.user) EditText username;
+  @Bind(R.id.pass) EditText password;
 
   @BindString(R.string.login_error)
   String loginErrorMessage;
@@ -33,7 +32,7 @@ class ExampleActivity extends Activity {
 }
 ```
 
-For documentation and additional information see [the website][3].
+Para consultar a documentação e informações adicionais veja [o site][3].
 
 __Remember: A butter knife is like [a dagger][1] only infinitely less sharp.__
 
@@ -42,7 +41,7 @@ __Remember: A butter knife is like [a dagger][1] only infinitely less sharp.__
 Download
 --------
 
-Download [the latest JAR][2] or grab via Maven:
+Baixe o [último JAR][2] ou via Maven:
 ```xml
 <dependency>
   <groupId>com.jakewharton</groupId>
@@ -50,12 +49,12 @@ Download [the latest JAR][2] or grab via Maven:
   <version>7.0.1</version>
 </dependency>
 ```
-or Gradle:
+ou Gradle:
 ```groovy
 compile 'com.jakewharton:butterknife:7.0.1'
 ```
 
-For the SNAPSHOT version:
+Para a versão SNAPSHOT:
 ```xml
 <dependency>
   <groupId>com.jakewharton</groupId>
@@ -69,7 +68,7 @@ For the SNAPSHOT version:
   <optional>true</optional>
 </dependency>
 ```
-or Gradle:
+ou Gradle:
 ```groovy
 buildscript {
   dependencies {
@@ -92,27 +91,24 @@ dependencies {
 }
 ```
 
-Snapshots of the development version are available in [Sonatype's `snapshots` repository][snap].
+Snapshots da versão de desenvolvimento estão disponíveis no [repositório `snapshots` de Sonatype][snap].
 
-
-License
+Licença
 -------
 
     Copyright 2013 Jake Wharton
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+    Licenciado sob a licença do Apache, Versão 2.0 (a "Licença");
+    você não pode usar este arquivo exceto em conformidade com a Licença.
+    Você pode obter uma cópia da Licença em
 
        http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
-
+    A menos que seja exigido pela lei aplicável ou acordado por escrito, software
+    distribuído sob a Licença é distribuído na base "AS IS",
+    SEM GARANTIAS OU CONDIÇÕES DE QUALQUER NATUREZA, evidente ou implícita. 
+    Veja a Licença para as permissões específicas da linguagem e as limitações
+    sob a licença. 
 
  [1]: http://square.github.com/dagger/
  [2]: https://search.maven.org/remote_content?g=com.jakewharton&a=butterknife&v=LATEST
